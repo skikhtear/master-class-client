@@ -20,6 +20,13 @@ const Blog = () => {
                     an end-to-end identity solution, supporting email and password accounts, phone auth,
                     and Google, Twitter, Facebook, and GitHub login, and more.</p>
             </div>
+            <div>
+                <h1>How does the private route work?</h1>
+                <p>The private route component is similar to the public route, the only change is
+                    that redirect URL and authenticate condition. If the user is not authenticated
+                    he will be redirected to the login page and the user can only access the
+                    authenticated routes If he is authenticated (Logged in).</p>
+            </div>
         </div>
     );
 };
