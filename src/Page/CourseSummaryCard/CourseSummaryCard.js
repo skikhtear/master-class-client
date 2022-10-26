@@ -6,16 +6,13 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 const courseSummaryCard = ({course}) => {
-    const { id, name, picture, about } = course;
+    const { id, name, picture } = course;
     return (
         <div>
                     <Card style={{ width: '22rem' }} key={id} >
                         <Card.Img variant="top" src={picture} />
                         <Card.Body>
                             <Card.Title>{name}</Card.Title>
-                            <Card.Text>
-                                {about}
-                            </Card.Text>
                     <Link to={`/courses/${id}`}>
                                 <Button variant="primary">Course Details</Button>
                             </Link>
