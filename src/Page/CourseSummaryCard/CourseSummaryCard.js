@@ -16,7 +16,7 @@ const courseSummaryCard = ({course}) => {
                             <Card.Text>
                                 {about}
                             </Card.Text>
-                            <Link to={'/courses/:id'}>
+                    <Link to={`/courses/${id}`}>
                                 <Button variant="primary">Course Details</Button>
                             </Link>
                         </Card.Body>

@@ -1,18 +1,25 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import SummaryCard from '../SummaryCard/SummaryCard';
-
+import { useLoaderData, Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const Course = () => {
-    const Course = useLoaderData();
+    const course = useLoaderData();
+    const { id, name, picture, about } = course;
     return (
         <div>
-            {
-                Course.map(course => <SummaryCard
-                    key={course.id}
-                    course={course}
-                ></SummaryCard>)
-            }
+            <Card key={id}>
+                <Card.Img variant="top" src={picture} />
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Text>
+                        {about}
+                    </Card.Text>
+                    <Link to={`/courses/${id}`}>
+                        <Button variant="primary">All Courses</Button>
+                    </Link>
+                </Card.Body>
+            </Card>
         </div>
     );
 };

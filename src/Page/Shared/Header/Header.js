@@ -8,6 +8,7 @@ import { FaUser } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../Context/AuthContext/AuthProvider';
 import './Header.css'
+import Toggle from '../../Toggle/Toggle';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -29,7 +30,7 @@ const Header = () => {
                             <Nav.Link><Link to='/courses'>Courses</Link></Nav.Link>
                             <Nav.Link><Link to='/courses'>FAQ</Link></Nav.Link>
                             <Nav.Link><Link to='/courses'>Blog</Link></Nav.Link>
-                            
+                            <Toggle></Toggle>
                         </Nav>
                         <Nav>
                             <Nav.Link eventKey={2} >
@@ -47,7 +48,7 @@ const Header = () => {
                                     user?.uid ?
                                         <>
                                             <span>{user?.displayName}</span>
-                                            <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                            <Button className='ms-3' variant="light" onClick={handleLogOut}>Log out</Button>
                                         </>
                                         :
                                         <>
