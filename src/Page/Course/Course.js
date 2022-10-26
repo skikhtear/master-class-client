@@ -15,9 +15,16 @@ const Course = () => {
                     <Card.Text>
                         {about}
                     </Card.Text>
-                    <Link to={`/courses/${id}`}>
-                        <Button variant="primary">All Courses</Button>
-                    </Link>
+                    <div className='d-flex justify-content-evenly'>
+                        <Link to={`/courses/${id}`}>
+                            <Button variant="primary">All Courses</Button>
+                        </Link>
+                        <Link to={'/GetPremiumAccess'}>
+                            <Button variant="primary">Get Premium Access</Button>
+                        </Link>
+
+                    </div>
+                    
                 </Card.Body>
             </Card>
         </div>
