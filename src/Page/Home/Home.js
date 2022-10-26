@@ -39,9 +39,9 @@ const Home = () => {
                     <Col lg="4">
                         <ButtonGroup vertical className='mt-5'>
                             <Button onClick={handleGoogleSignIn} variant="outline-primary" className='mb-2 px-5'><FaGoogle></FaGoogle> Login With Google</Button>
-                            <Button onClick={handleGithubSignIn} variant="outline-dark" className='mb-2 px-5'><FaGithub></FaGithub> Login With GitHub</Button>
-                            <Link to={'/login'}><Button variant="outline-dark" className='mb-2 px-5'><FaUserAlt></FaUserAlt> Login/Password</Button></Link>
-                            <Link to={'/register'}><Button variant="outline-dark" className='px-5'><FaUserAlt></FaUserAlt> Register</Button></Link>
+                            <Button onClick={handleGithubSignIn} variant="outline-primary" className='mb-2 px-5'><FaGithub></FaGithub> Login With GitHub</Button>
+                            <Link to={'/login'}><Button variant="outline-primary" className='mb-2 px-5'><FaUserAlt></FaUserAlt> Login/Password</Button></Link>
+                            <Link to={'/register'}><Button variant="outline-primary" className='px-5'><FaUserAlt></FaUserAlt> Register</Button></Link>
                         </ButtonGroup>
                     </Col>
                 </Row>

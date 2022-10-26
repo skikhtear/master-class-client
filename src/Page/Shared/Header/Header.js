@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../Context/AuthContext/AuthProvider';
+import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -17,31 +18,20 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div>
+        <div className='nav-bar'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand >Master Class</Navbar.Brand>
+                    <Navbar.Brand  className='mx-5'>Master Class</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link><Link to='/courses'>All Courses</Link></Nav.Link>
-                            <Nav.Link >Pricing</Nav.Link>
+                            <Nav.Link><Link to='/'>Home</Link></Nav.Link>
+                            <Nav.Link><Link to='/courses'>Courses</Link></Nav.Link>
+                            <Nav.Link><Link to='/courses'>FAQ</Link></Nav.Link>
+                            <Nav.Link><Link to='/courses'>Blog</Link></Nav.Link>
+                            
                         </Nav>
                         <Nav>
-                            <Nav.Link >
-                                {
-                                    user?.uid ?
-                                        <>
-                                            <span>{user?.displayName}</span>
-                                            <Button variant="light" onClick={handleLogOut}>Log out</Button>
-                                        </>
-                                        :
-                                        <>
-                                            <Link to='/login'>Login</Link>
-                                            <Link to='/register'>Register</Link>
-                                        </>
-                                }
-                            </Nav.Link>
                             <Nav.Link eventKey={2} >
                                 {user?.photoURL ?
                                     <Image
@@ -52,6 +42,21 @@ const Header = () => {
                                     : <FaUser></FaUser>
                                 }
                             </Nav.Link>
+                            <Nav.Link >
+                                {
+                                    user?.uid ?
+                                        <>
+                                            <span>{user?.displayName}</span>
+                                            <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                        </>
+                                        :
+                                        <>
+                                            <Link className='m-2' to='/login'>Login</Link>
+                                            <Link className='m-2' to='/register'>Register</Link>
+                                        </>
+                                }
+                            </Nav.Link>
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

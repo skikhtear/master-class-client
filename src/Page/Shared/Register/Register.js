@@ -84,7 +84,7 @@ const Register = () => {
                     <Form.Check
                         type="checkbox"
                         onClick={handleAccepted}
-                        label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
+                        label={<> <Link to="/terms" className='text-light'>Accept Terms and conditions</Link></>} />
                 </Form.Group>
 
                 <Button variant="primary" type="submit" disabled={!accepted}>
