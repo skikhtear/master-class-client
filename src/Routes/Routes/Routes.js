@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import Blog from "../../Page/Blog/Blog";
 import Course from "../../Page/Course/Course";
 import Courses from "../../Page/Courses/Courses";
 import GetPremiumAccess from "../../Page/GetPremiumAccess/GetPremiumAccess";
@@ -39,6 +40,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/GetPremiumAccess',
                 element:<PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute> 
+            },
+            {
+                path: '/blog',
+                element:<Blog></Blog> 
             },
         ]
     }
