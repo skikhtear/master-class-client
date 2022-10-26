@@ -13,6 +13,13 @@ const Blog = () => {
                     In that preflight, the browser sends headers that indicate the HTTP method and headers
                     that will be used in the actual request.</p>
             </div>
+            <div>
+                <h1>Why are you using firebase? What other options do you have to implement authentication?</h1>
+                <p>Firebase Authentication aims to make building secure authentication systems easy,
+                    while improving the sign-in and onboarding experience for end users. It provides
+                    an end-to-end identity solution, supporting email and password accounts, phone auth,
+                    and Google, Twitter, Facebook, and GitHub login, and more.</p>
+            </div>
         </div>
     );
 };
