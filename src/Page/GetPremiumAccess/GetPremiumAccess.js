@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 const GetPremiumAccess = () => {
     return (
-        <div>
+        <div className='text-light'>
             <h1>this is get premium</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

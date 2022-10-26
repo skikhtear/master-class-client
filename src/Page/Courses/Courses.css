@@ -24,3 +24,14 @@
     color: #ffff;
 
 }
+@media screen and (max-width:600px) {
+    .courses{
+        grid-template-columns: 1fr;
+    }
+
+    .courses-card{
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+    }
+
+}

@@ -39,7 +39,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/GetPremiumAccess',
-                element:<PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute> 
+                element: <PrivateRoute><GetPremiumAccess></GetPremiumAccess></PrivateRoute> 
             },
             {
                 path: '/blog',
