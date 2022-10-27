@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../Context/AuthContext/AuthProvider';
 import './Header.css'
 import Toggle from '../../Toggle/Toggle';
+import logo from '../../../Assate/Image/logo.png'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -22,7 +23,8 @@ const Header = () => {
         <div className='nav-bar'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand  className='mx-5'>Master Class</Navbar.Brand>
+                    <img src={logo} alt="" />
+                    <Navbar.Brand  className='me-5 ms-2'>Master Class</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">

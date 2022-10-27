@@ -8,9 +8,7 @@ import './Courses.css'
 
 const Courses = () => {
     const allCourses = useLoaderData();
-
-    
-    
+ 
     return (
         <div className='courses'>
             <div className='courses-card mt-5'>
