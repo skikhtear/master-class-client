@@ -5,7 +5,7 @@ import './SideNav.css'
 const SideNav = ({course}) => {
     return (
         <div className='side-nav'>
-            <Link>{course.name}</Link>
+            <Link to={`/courses/${course.id}`}>{course.name}</Link>
         </div>
     );
 };

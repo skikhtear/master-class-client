@@ -65,8 +65,7 @@ const Home = () => {
                                 </Carousel.Item>
                             </Carousel>
                         </div>
-
-                        <div>
+                        <div className='mt-5'>
                             <ButtonGroup vertical className='mt-5'>
                                 <Button onClick={handleGoogleSignIn} variant="outline-primary" className='mb-2 px-5'><FaGoogle></FaGoogle> Login With Google</Button>
                                 <Button onClick={handleGithubSignIn} variant="outline-primary" className='mb-2 px-5'><FaGithub></FaGithub> Login With GitHub</Button>

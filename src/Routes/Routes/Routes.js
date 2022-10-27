@@ -7,6 +7,7 @@ import GetPremiumAccess from "../../Page/GetPremiumAccess/GetPremiumAccess";
 import Home from "../../Page/Home/Home";
 import Login from "../../Page/Shared/Login/Login";
 import Register from "../../Page/Shared/Register/Register";
+import Pdf from "../../Pdf/Pdf";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
@@ -44,6 +45,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element:<Blog></Blog> 
+            },
+            {
+                path: '/pdf',
+                element: <Pdf></Pdf>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
         ]
     }
