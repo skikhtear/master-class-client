@@ -3,6 +3,7 @@ import Main from "../../layout/Main";
 import Blog from "../../Page/Blog/Blog";
 import Course from "../../Page/Course/Course";
 import Courses from "../../Page/Courses/Courses";
+import FAQ from "../../Page/Faq/Faq";
 import GetPremiumAccess from "../../Page/GetPremiumAccess/GetPremiumAccess";
 import Home from "../../Page/Home/Home";
 import Login from "../../Page/Shared/Login/Login";
@@ -23,12 +24,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://master-class-server.vercel.app/courses')
             },
             {
                 path: '/courses/:id',
                 element: <Course></Course>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://master-class-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/login',
@@ -47,9 +48,13 @@ export const routes = createBrowserRouter([
                 element:<Blog></Blog> 
             },
             {
+                path: '/faq',
+                element:<FAQ></FAQ> 
+            },
+            {
                 path: '/pdf',
                 element: <Pdf></Pdf>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://master-class-server.vercel.app/${params.id}`)
             },
         ]
     }
